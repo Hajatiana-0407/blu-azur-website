@@ -47,20 +47,29 @@ body {
     --color-gray-light: #f4faff;
     --color-gray-medium: #f0f0f0;
     --color-gray-dark: #d9d9d9;
+    --color-bg-footer: #2161AE;
 
-    --font-size-heading-1: clamp(38px, 6.67vw, 96px);
+
+    --font-size-sm: clamp(10px, 1.11vw, 16px);
+    /* Figma: 25.27px → réduit */
+    --font-size-base: clamp(12px, 1.25vw, 18px);
+    /* Figma: 28.2px */
+    --font-size-lg: clamp(14px, 1.39vw, 20px);
+    /* Figma: 32.09px */
+
+    --font-size-7xl: clamp(38px, 6.67vw, 96px);
     /* Figma: 112px */
-    --font-size-heading-2: clamp(29px, 5vw, 72px);
+    --font-size-6xl: clamp(29px, 5vw, 72px);
     /* Figma: 99px */
-    --font-size-heading-3: clamp(24px, 4.17vw, 60px);
+    --font-size-5xl: clamp(24px, 4.17vw, 60px);
     /* Figma: 79px */
-    --font-size-heading-4: clamp(19px, 3.33vw, 48px);
+    --font-size-4xl: clamp(19px, 3.33vw, 48px);
     /* Figma: 48px */
-    --font-size-heading-5: clamp(16px, 2.78vw, 40px);
+    --font-size-3xl: clamp(16px, 2.78vw, 40px);
     /* Figma: 50px */
-    --font-size-heading-6: clamp(14px, 2.5vw, 36px);
+    --font-size-2xl: clamp(14px, 2.5vw, 36px);
     /* Figma: 48px */
-    --font-size-heading-7: clamp(12px, 2.08vw, 30px);
+    --font-size-xl: clamp(12px, 2.08vw, 30px);
     /* Figma: 38px */
 
 

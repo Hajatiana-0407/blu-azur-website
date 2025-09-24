@@ -68,7 +68,7 @@ const Footer = (): JSX.Element => {
 
                 {/* Contact */}
                 <address className="flex flex-col gap-8 text-white not-italic">
-                    <h5 className="text-h6 font-bold">Contactez-nous</h5>
+                    <h5 className="text-2xl font-bold">Contactez-nous</h5>
                     <ul className="flex flex-col gap-5 text-lg">
                         {contacts.map((contact, index) => (
                             <ContactItem key={index} {...contact} />
