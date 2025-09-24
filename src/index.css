@@ -1,12 +1,15 @@
 @import "tailwindcss";
 
-/* Déclaration des polices */
+/*--------------------------------------
+  Fonts
+---------------------------------------*/
 @font-face {
     font-family: 'Mulish';
     src: url('./assets/fonts/Mulish-Regular.ttf') format('woff2'),
         url('./assets/fonts/Mulish-Regular.ttf') format('woff');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -14,9 +17,163 @@
     src: url('./assets/fonts/Mulish-Bold.ttf') format('woff2'),
         url('./assets/fonts/Mulish-Bold.ttf') format('woff');
     font-weight: 700;
-    font-: style normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*--------------------------------------
+  Global styles
+---------------------------------------*/
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 body {
+    margin: 0;
+    padding: 0;
     font-family: 'Mulish', sans-serif;
+    background-color: var(--white);
+}
+
+/*--------------------------------------
+  Theme variables
+---------------------------------------*/
+@theme {
+    --color-white: #fff;
+    --color-black: #020202;
+    --color-secondary: #616161;
+    --color-theme: #4097FF;
+    --color-gray-light: #f4faff;
+    --color-gray-medium: #f0f0f0;
+    --color-gray-dark: #d9d9d9;
+
+    --font-size-heading-1: clamp(38px, 6.67vw, 96px);
+    /* Figma: 112px */
+    --font-size-heading-2: clamp(29px, 5vw, 72px);
+    /* Figma: 99px */
+    --font-size-heading-3: clamp(24px, 4.17vw, 60px);
+    /* Figma: 79px */
+    --font-size-heading-4: clamp(19px, 3.33vw, 48px);
+    /* Figma: 48px */
+    --font-size-heading-5: clamp(16px, 2.78vw, 40px);
+    /* Figma: 50px */
+    --font-size-heading-6: clamp(14px, 2.5vw, 36px);
+    /* Figma: 48px */
+    --font-size-heading-7: clamp(12px, 2.08vw, 30px);
+    /* Figma: 38px */
+
+
+    --font-family-heading: 'Mulish';
+    --font-family-body: 'Mulish';
+
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+}
+
+/*--------------------------------------
+  Keyframes
+---------------------------------------*/
+/* ... */
+
+/*--------------------------------------
+  Utilities
+---------------------------------------*/
+@layer utilities {
+
+    *::-webkit-scrollbar {
+        width: 8px;
+        height: 10px;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+    }
+
+    * {
+        scrollbar-width: thin;
+    }
+
+    .text-sm {
+        font-size: var(--font-size-sm);
+        font-family: var(--font-family-body);
+    }
+
+    .text-base {
+        font-size: var(--font-size-base);
+        font-family: var(--font-family-body);
+    }
+
+    .text-lg {
+        font-size: var(--font-size-lg);
+        font-family: var(--font-family-body);
+    }
+
+    .text-h1 {
+        font-size: var(--font-size-heading-1);
+        font-family: var(--font-family-heading);
+        font-weight: var(--font-weight-bold);
+    }
+
+    .text-h2 {
+        font-size: var(--font-size-heading-2);
+        font-family: var(--font-family-heading);
+        font-weight: var(--font-weight-bold);
+    }
+
+    .text-h3 {
+        font-size: var(--font-size-heading-3);
+        font-family: var(--font-family-heading);
+        font-weight: var(--font-weight-bold);
+    }
+
+    .text-h4 {
+        font-size: var(--font-size-heading-4);
+        font-family: var(--font-family-heading);
+        font-weight: var(--font-weight-bold);
+    }
+
+    .text-h5 {
+        font-size: var(--font-size-heading-5);
+        font-family: var(--font-family-heading);
+        font-weight: var(--font-weight-bold);
+    }
+
+    .text-h6 {
+        font-size: var(--font-size-heading-6);
+        font-family: var(--font-family-heading);
+        font-weight: var(--font-weight-bold);
+    }
+
+    .text-h7 {
+        font-size: var(--font-size-heading-7);
+        font-family: var(--font-family-heading);
+        font-weight: var(--font-weight-bold);
+    }
+
+    .font-heading {
+        font-family: var(--font-family-heading);
+    }
+
+    .font-body {
+        font-family: var(--font-family-body);
+    }
+
+    .font-normal {
+        font-weight: var(--font-weight-normal);
+    }
+
+    .font-bold {
+        font-weight: var(--font-weight-bold);
+    }
+}
+
+/*--------------------------------------
+  Components
+---------------------------------------*/
+@layer components {
+    .__container {
+        @apply max-w-[1240px] h-full mx-auto px-4;
+    }
+
 }
