@@ -74,7 +74,8 @@ body {
 /*--------------------------------------
   Keyframes
 ---------------------------------------*/
-/* ... */
+
+/* *** */
 
 /*--------------------------------------
   Utilities
@@ -176,4 +177,14 @@ body {
         @apply max-w-[1240px] h-full mx-auto px-4;
     }
 
+
+    /* Gestions de l'onglet actif */
+    .link-underline::after {
+        content: ' ';
+        @apply w-0 h-1.5 absolute -bottom-5.5 left-1/2 -translate-x-1/2 bg-white transition-all duration-200;
+    }
+
+    .link-underline-active::after {
+        @apply w-1/2;
+    }
 }
