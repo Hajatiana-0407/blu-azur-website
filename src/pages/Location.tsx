@@ -4,7 +4,8 @@ import ImageMapBg from "../assets/images/map.png"
 const Location = () => {
     return (
         <div
-            className="relative bg-no-repeat bg-cover bg-top py-20 text-black"
+            data-white={true}
+            className="relative bg-no-repeat bg-cover bg-top py-20 text-black __observe_to_change_header"
             style={{
                 backgroundImage: `linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0.1)), url(${ImageMapBg})`,
             }}

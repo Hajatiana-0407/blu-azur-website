@@ -52,7 +52,8 @@ const activities = [
 const Activity = () => {
     return (
         <div
-            className="relative bg-no-repeat bg-cover bg-top py-20 "
+            data-white={true}
+            className="relative bg-no-repeat bg-cover bg-top py-20 __observe_to_change_header"
             style={{
                 backgroundImage: `linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0.1)), url(${ImageBg})`,
             }}

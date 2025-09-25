@@ -4,7 +4,7 @@ import ImageDiscoverGroup from "../assets/images/dicoverGroupImage.png"
 const Discover = () => {
     return (
         <div
-            className="relative bg-no-repeat bg-cover bg-top py-20 text-white"
+            className="relative bg-no-repeat bg-cover bg-top py-20 text-white __observe_to_change_header"
             style={{
                 backgroundImage: `linear-gradient(to left, rgba(var(--color-theme-rgb), 1),rgba(var(--color-theme-rgb), 1) , rgba(0,0,0,0.2)), url(${ImageDiscoverBg})`,
             }}

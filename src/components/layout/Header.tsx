@@ -1,3 +1,8 @@
+import { HiOutlineMenuAlt3 } from 'react-icons/hi'
+import logo from '../../assets/logo.svg'
+import { useAppContext } from '../../context/AppContext'
+import clsx from 'clsx';
+import { useEffect, useState } from 'react';
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import logo from "../../assets/logo.svg";
 import { useAppContext } from "../../context/AppContext";
@@ -19,6 +24,36 @@ const mobileMenuVariants = {
 const Header = () => {
     const { activeOnglet, setActiveOnglet } = useAppContext();
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [isToColor, setIsToColor] = useState(false);
+
+
+    useEffect(() => {
+        const sections = document.querySelectorAll('.__observe_to_change_header');
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const hasWhite = entry.target.getAttribute("data-white");
+                        setIsToColor(hasWhite !== null ? true : false);
+
+                        const id = entry.target.getAttribute("id");
+                        if (id) setActiveOnglet(id);
+                    }
+                });
+            },
+            {
+                rootMargin: "-76px 0px 0px 0px",
+                threshold: 0,
+            }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        return () => {
+            sections.forEach((section) => observer.unobserve(section));
+        };
+    }, [setActiveOnglet]);
+
 
     const handleNavClick = useCallback(
         (id: string) => {
@@ -29,9 +64,11 @@ const Header = () => {
     );
 
     return (
-        <header className="w-full h-[76px] fixed top-5 left-0 right-0 z-50 bg-transparent">
-            <div className="__container">
-                <div className="w-full h-full border-b border-white flex justify-between items-center">
+        <header className={clsx("w-full h-[76px] fixed top-5 left-0 right-0 z-50 ")}>
+            <div className={clsx("__container max-w-[1250] ")} >
+                <div className={clsx({
+                    'px-[5px] rounded relative backdrop-blur-lg bg-theme/30': isToColor,
+                }, "w-full h-full border-b border-white flex justify-between items-center px-[5px]")} >
                     {/* Logo */}
                     <a href="#about" className="text-white">
                         <img src={logo} alt="logo" className="w-[106px]" />
