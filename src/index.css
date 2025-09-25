@@ -53,7 +53,7 @@ body {
 
     --font-size-sm: clamp(10px, 1.11vw, 11.66px);
     --font-size-base: clamp(11px, 1.25vw, 12.89px);
-    --font-size-lg: clamp(12px, 1.39vw, 14.55px);
+    --font-size-lg: clamp(14px, 2vw, 20px);
 
     --font-size-7xl: clamp(28px, 6.67vw, 47.27px);
     --font-size-6xl: clamp(24px, 5vw, 41.78px);
@@ -202,13 +202,13 @@ body {
 ---------------------------------------*/
 @layer components {
     .__container {
-        @apply mx-auto w-full h-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-[1240px];
+        @apply max-w-[1240px] container mx-auto h-full px-10 overflow-hidden;
     }
 
     /* Gestions de l'onglet actif */
     .link-underline::after {
         content: ' ';
-        @apply w-0 h-1.5 absolute -bottom-6.5 left-1/2 -translate-x-1/2 bg-white transition-all duration-700;
+        @apply w-0 h-2 absolute -bottom-6.5 left-1/2 -translate-x-1/2 bg-white transition-all duration-700;
     }
 
     .link-underline-active::after {

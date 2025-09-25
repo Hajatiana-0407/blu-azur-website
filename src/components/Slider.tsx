@@ -53,7 +53,7 @@ const Slider: React.FC<SliderProps> = ({ images, position = "center", height }) 
                     onClick={handleNext}
                     aria-label="Suivant"
                     className={clsx(
-                        "absolute right-0 -translate-y-1/2 p-3 border-2 cursor-pointer",
+                        "absolute right-1/4 lg:right-0 -translate-y-1/2 p-3 border-2 cursor-pointer",
                         "hover:scale-120 border-white hover:bg-white hover:text-black",
                         "rounded-full font-bold transition z-20",
                         {
