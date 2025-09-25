@@ -5,9 +5,10 @@ import { FaChevronRight } from "react-icons/fa";
 interface SliderProps {
     images: string[];
     position?: "top" | "center" | "bottom";
+    height?: 'max'
 }
 
-const Slider: React.FC<SliderProps> = ({ images, position = "center" }) => {
+const Slider: React.FC<SliderProps> = ({ images, position = "center", height }) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [previousIndex, setPreviousIndex] = useState<number | null>(null);
     const [nextIndex, setNextIndex] = useState<number | null>(null);
@@ -43,6 +44,7 @@ const Slider: React.FC<SliderProps> = ({ images, position = "center" }) => {
                         previousIndex={previousIndex}
                         nextIndex={nextIndex}
                         total={images.length}
+                        height={height}
                     />
                 ))}
 
@@ -79,11 +81,12 @@ interface SlideProps {
     previousIndex: number | null;
     nextIndex: number | null;
     total: number;
+    height?: 'max'
 }
 
-const SLIDE_WIDTH = 350;
+const SLIDE_WIDTH = 337;
 
-const Slide: React.FC<SlideProps> = ({ img, index, activeIndex, previousIndex, nextIndex, total }) => {
+const Slide: React.FC<SlideProps> = ({ img, index, activeIndex, previousIndex, nextIndex, total, height }) => {
     const isActive = index === activeIndex;
     const isPrevious = index === previousIndex;
     const isNext = index === nextIndex;
@@ -95,10 +98,11 @@ const Slide: React.FC<SlideProps> = ({ img, index, activeIndex, previousIndex, n
     return (
         <div
             className={clsx(
-                "absolute w-[294px] h-[237px] rounded-3xl transition-all duration-700 ease-in-out",
+                { "h-[237px]": height !== 'max' },
+                { "h-full": height === 'max' }, "absolute w-[294px]  rounded-3xl transition-all duration-700 ease-in-out",
                 isActive
-                    ? "z-10 shadow-xl shadow-black/30 scale-100"
-                    : "z-0 shadow-md shadow-black/10 scale-80 brightness-40",
+                    ? "z-10  scale-100"
+                    : "z-0 scale-80 brightness-40",
                 isPrevious && "animate-slideOutIn",
                 isNext && "animate-slideInNext"
             )}

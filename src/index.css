@@ -56,7 +56,8 @@ body {
 
     --font-size-7xl: clamp(28px, 6.67vw, 47.27px);
     --font-size-6xl: clamp(24px, 5vw, 41.78px);
-    --font-size-5xl: clamp(20px, 4.17vw, 33.34px);
+    --font-size-5xl: clamp(18px, 3.8vw, 30px);
+
     --font-size-4xl: clamp(16px, 3.33vw, 20.26px);
     --font-size-3xl: clamp(15px, 2.78vw, 21.10px);
     --font-size-2xl: clamp(14px, 2.5vw, 20.26px);
@@ -200,7 +201,7 @@ body {
 ---------------------------------------*/
 @layer components {
     .__container {
-        @apply mx-auto w-full  h-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-[1240px];
+        @apply mx-auto w-full h-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-[1240px];
     }
 
     /* Gestions de l'onglet actif */
