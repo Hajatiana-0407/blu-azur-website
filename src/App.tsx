@@ -1,7 +1,20 @@
+import Footer from './components/layout/Footer'
+import Header from './components/layout/Header'
 import './index.css'
+import Hero from './pages/Hero'
+
+
 const App = () => {
   return (
-    <div className='text-red-500 text-center p-10 text-8xl'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id eaque nam accusantium vel recusandae assumenda.</div>
+    <div className='h-screen'>
+
+      {/* Entete */}
+      <Header />
+      <section id='about'>
+        <Hero />
+      </section>
+      <Footer />
+    </div>
   )
 }
 
