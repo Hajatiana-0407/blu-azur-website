@@ -16,9 +16,10 @@ const Feature = () => {
     <div className="py-25 bg-white text-black">
       <div className="__container">
         <div className="w-full grid grid-cols-2 gap-10">
+
           {/* Texte */}
-          <div className="space-y-10">
-            <header>
+          <div className="space-y-10 max-lg:col-span-2 max-lg:text-center">
+            <div>
               <h2 className="text-[2.5rem] mb-5  leading-tight">
                 Le confort et la sérénité d’un{" "}
                 <span className="font-bold">appartement privé</span>
@@ -29,10 +30,10 @@ const Feature = () => {
                 confortable et moderne, ils sont parfaits pour une escapade
                 détente ou un séjour prolongé.
               </p>
-            </header>
+            </div>
 
             {/* Liste d'inclusions */}
-            <div>
+            <div className="text-left">
               <span className="text-xl font-semibold mb-4 block">
                 Les inclusions :
               </span>
@@ -48,7 +49,7 @@ const Feature = () => {
           </div>
 
           {/* Image ou visuel à droite */}
-          <div className="flex items-center justify-center text-white">
+          <div className="min-h-40 max-lg:col-span-2 max-full text-white">
             <Slider images={sliderImages} height="max" />
           </div>
         </div>
