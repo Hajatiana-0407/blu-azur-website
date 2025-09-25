@@ -3,7 +3,7 @@ import ImageDiscoverGroup from "../assets/images/dicoverGroupImage.png"
 
 const Discover = () => {
     return (
-        <section
+        <div
             className="relative bg-no-repeat bg-cover bg-top py-20 text-white"
             style={{
                 backgroundImage: `linear-gradient(to left, rgba(var(--color-theme-rgb), 1),rgba(var(--color-theme-rgb), 1) , rgba(0,0,0,0.2)), url(${ImageDiscoverBg})`,
@@ -33,7 +33,7 @@ const Discover = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
 

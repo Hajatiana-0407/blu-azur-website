@@ -208,7 +208,7 @@ body {
     /* Gestions de l'onglet actif */
     .link-underline::after {
         content: ' ';
-        @apply w-0 h-1.5 absolute -bottom-6.5 left-1/2 -translate-x-1/2 bg-white transition-all duration-200;
+        @apply w-0 h-1.5 absolute -bottom-6.5 left-1/2 -translate-x-1/2 bg-white transition-all duration-700;
     }
 
     .link-underline-active::after {

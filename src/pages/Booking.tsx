@@ -3,7 +3,7 @@ import Button from "../components/ui/Button";
 
 const Booking = () => {
     return (
-        <section
+        <div
             className="relative  bg-cover bg-center py-80 text-white"
             style={{
                 backgroundImage: `linear-gradient(to right, rgba(var(--color-theme-rgb), 1),rgba(var(--color-theme-rgb), 0.4)  ,  rgba(0,0,0,0.2)), url(${BookingImageBg})`,
@@ -26,7 +26,7 @@ const Booking = () => {
                 </div>
             </div>
 
-        </section>
+        </div>
     )
 }
 

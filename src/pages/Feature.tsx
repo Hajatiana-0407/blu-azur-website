@@ -13,7 +13,7 @@ const sliderImages = [sofaImage, sofaImage];
 
 const Feature = () => {
   return (
-    <section className="py-25 bg-white text-black">
+    <div className="py-25 bg-white text-black">
       <div className="__container">
         <div className="w-full grid grid-cols-2 gap-10">
           {/* Texte */}
@@ -53,7 +53,7 @@ const Feature = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

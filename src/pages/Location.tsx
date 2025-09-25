@@ -3,7 +3,7 @@ import ImageMapBg from "../assets/images/map.png"
 
 const Location = () => {
     return (
-        <section
+        <div
             className="relative bg-no-repeat bg-cover bg-top py-20 text-black"
             style={{
                 backgroundImage: `linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0.1)), url(${ImageMapBg})`,
@@ -50,7 +50,7 @@ const Location = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
 

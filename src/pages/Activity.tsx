@@ -50,7 +50,7 @@ const activities = [
 
 const Activity = () => {
     return (
-        <section className="py-20 bg-gray-50">
+        <div className="py-20 bg-gray-50">
             <div className="__container space-y-8">
 
                 {/* Pour gerer la 1er ligne en 2 cols  */}
@@ -68,7 +68,7 @@ const Activity = () => {
                     ))}
                 </div>
             </div>
-        </section>
+        </div>
     );
 };
 

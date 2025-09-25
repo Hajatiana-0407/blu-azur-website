@@ -32,7 +32,7 @@ const sliderImages = [side1, side2];
 
 const Hero = () => {
     return (
-        <section
+        <div
             className="relative bg-cover bg-top py-40"
             style={{
                 backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.2)), url(${heroImg})`,
@@ -80,7 +80,7 @@ const Hero = () => {
                     </a>
                 ))}
             </aside>
-        </section>
+        </div>
     );
 };
 
