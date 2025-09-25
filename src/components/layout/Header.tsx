@@ -29,9 +29,9 @@ const Header = () => {
                                 <a className="inline-block py-2 px-7 leading-[100%]" href="#about">À propos</a>
                             </li>
                             <li className={clsx({
-                                'link-underline-active': activeOnglet === 'localisation'
-                            }, 'relative link-underline')} onClick={() => setActiveOnglet('localisation')}>
-                                <a className="inline-block py-2 px-7 leading-[100%]" href="#localisation">Localisation</a>
+                                'link-underline-active': activeOnglet === 'location'
+                            }, 'relative link-underline')} onClick={() => setActiveOnglet('location')}>
+                                <a className="inline-block py-2 px-7 leading-[100%]" href="#location">Localisation</a>
                             </li>
                             <li className={clsx({
                                 'link-underline-active': activeOnglet === 'activity'

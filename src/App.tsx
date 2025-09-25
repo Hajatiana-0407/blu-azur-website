@@ -4,6 +4,7 @@ import './index.css'
 import DestinationHighlights from './pages/DestinationHighlights'
 import Feature from './pages/Feature'
 import Hero from './pages/Hero'
+import Location from './pages/Location'
 
 
 const App = () => {
@@ -13,15 +14,13 @@ const App = () => {
       {/* Entete */}
       <Header />
       <section id='about'>
-        {/* Section Hero */}
         <Hero />
-
-        {/* Section Feature */}
         <Feature />
-
-        {/* Section Destination Highlights */}
         <DestinationHighlights />
-        
+      </section>
+
+      <section id='location'>
+        <Location  />
       </section>
       <Footer />
     </div>
