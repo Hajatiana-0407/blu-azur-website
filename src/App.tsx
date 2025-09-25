@@ -1,6 +1,7 @@
 import Footer from './components/layout/Footer'
 import Header from './components/layout/Header'
 import './index.css'
+import DestinationHighlights from './pages/DestinationHighlights'
 import Feature from './pages/Feature'
 import Hero from './pages/Hero'
 
@@ -17,6 +18,9 @@ const App = () => {
 
         {/* Section Feature */}
         <Feature />
+
+        {/* Section Destination Highlights */}
+        <DestinationHighlights />
         
       </section>
       <Footer />
