@@ -1,6 +1,7 @@
 import Footer from './components/layout/Footer'
 import Header from './components/layout/Header'
 import './index.css'
+import Activity from './pages/Activity'
 import Booking from './pages/Booking'
 import DestinationHighlights from './pages/DestinationHighlights'
 import Discover from './pages/Discover'
@@ -22,7 +23,11 @@ const App = () => {
 
       <section id='location'>
         <Location />
+      </section>
+
+      <section id='activity'>
         <Discover />
+        <Activity />
       </section>
 
       <section id='booking'>

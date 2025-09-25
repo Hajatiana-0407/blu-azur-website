@@ -8,7 +8,8 @@ type ButtonProps = {
     backgroundColor?: 'theme'
     onClick?: () => void
     className?: string
-    href?: string
+    href?: string;
+    size?: "sm" | "normal"
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -18,6 +19,7 @@ const Button: React.FC<ButtonProps> = ({
     color,
     backgroundColor,
     href,
+    size
 }) => {
     const colorStyles = clsx({
         'border border-white text-white hover:bg-white hover:text-black': color === 'white',
@@ -37,20 +39,23 @@ const Button: React.FC<ButtonProps> = ({
     return (
         <a
             href={href}
-            target={href ? '_blank' : undefined}
-            rel={href ? 'noopener noreferrer' : undefined}
+            target={href ? "_blank" : undefined}
+            rel={href ? "noopener noreferrer" : undefined}
             className={clsx(
-                'relative flex w-full min-w-50 items-center h-13 px-10 rounded-full transition-all duration-300 text-left text-lg font-bold cursor-pointer group',
+                { "text-base px-5 h-10": size === "sm" },
+                { "text-lg px-10 h-13": size !== "sm" },
+                "relative flex w-full min-w-50 items-center rounded-full transition-all duration-300 text-left font-bold cursor-pointer group",
                 colorStyles,
                 className
             )}
             onClick={onClick}
         >
-            {label}
+            <span className="truncate max-w-[80%]">{label}</span>
             <span className={iconStyles}>
                 <FaChevronRight />
             </span>
         </a>
+
     )
 }
 
