@@ -61,7 +61,7 @@ const Footer = (): JSX.Element => {
                     <img
                         src={logo}
                         alt="Logo Blu Azur"
-                        className="w-[250px] md:w-[284px] mb-2"
+                        className="w-[240px] md:w-[273px] mb-2"
                         loading="lazy"
                     />
                 </div>

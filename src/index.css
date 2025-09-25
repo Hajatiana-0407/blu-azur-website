@@ -50,27 +50,17 @@ body {
     --color-bg-footer: #2161AE;
 
 
-    --font-size-sm: clamp(10px, 1.11vw, 16px);
-    /* Figma: 25.27px → réduit */
-    --font-size-base: clamp(12px, 1.25vw, 18px);
-    /* Figma: 28.2px */
-    --font-size-lg: clamp(14px, 1.39vw, 20px);
-    /* Figma: 32.09px */
+    --font-size-sm: clamp(10px, 1.11vw, 10.66px);
+    --font-size-base: clamp(11px, 1.25vw, 11.89px);
+    --font-size-lg: clamp(12px, 1.39vw, 13.55px);
 
-    --font-size-7xl: clamp(38px, 6.67vw, 96px);
-    /* Figma: 112px */
-    --font-size-6xl: clamp(29px, 5vw, 72px);
-    /* Figma: 99px */
-    --font-size-5xl: clamp(24px, 4.17vw, 60px);
-    /* Figma: 79px */
-    --font-size-4xl: clamp(19px, 3.33vw, 48px);
-    /* Figma: 48px */
-    --font-size-3xl: clamp(16px, 2.78vw, 40px);
-    /* Figma: 50px */
-    --font-size-2xl: clamp(14px, 2.5vw, 36px);
-    /* Figma: 48px */
-    --font-size-xl: clamp(12px, 2.08vw, 30px);
-    /* Figma: 38px */
+    --font-size-7xl: clamp(28px, 6.67vw, 47.27px);
+    --font-size-6xl: clamp(24px, 5vw, 41.78px);
+    --font-size-5xl: clamp(20px, 4.17vw, 33.34px);
+    --font-size-4xl: clamp(16px, 3.33vw, 20.26px);
+    --font-size-3xl: clamp(15px, 2.78vw, 21.10px);
+    --font-size-2xl: clamp(14px, 2.5vw, 20.26px);
+    --font-size-xl: clamp(12px, 2.08vw, 16.04px);
 
 
     --font-family-heading: 'Mulish';
@@ -84,7 +74,31 @@ body {
   Keyframes
 ---------------------------------------*/
 
-/* *** */
+@keyframes slideOutIn {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    40% {
+        transform: translateX(-150px);
+        /* vers la gauche */
+        opacity: 0.5;
+    }
+
+    60% {
+        transform: translateX(200px);
+        /* saute à droite */
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(var(--tx, '340px'));
+        opacity: 1;
+    }
+}
+
+
 
 /*--------------------------------------
   Utilities
@@ -176,6 +190,11 @@ body {
     .font-bold {
         font-weight: var(--font-weight-bold);
     }
+
+    /* ? Annimation slide  */
+    .animate-slideOutIn {
+        animation: slideOutIn 0.7s ease-in-out forwards;
+    }
 }
 
 /*--------------------------------------
@@ -183,14 +202,13 @@ body {
 ---------------------------------------*/
 @layer components {
     .__container {
-        @apply max-w-[1240px] h-full mx-auto px-4;
+        @apply max-w-[1240px] h-full mx-auto px-10;
     }
-
 
     /* Gestions de l'onglet actif */
     .link-underline::after {
         content: ' ';
-        @apply w-0 h-1.5 absolute -bottom-5.5 left-1/2 -translate-x-1/2 bg-white transition-all duration-200;
+        @apply w-0 h-1.5 absolute -bottom-6.5 left-1/2 -translate-x-1/2 bg-white transition-all duration-200;
     }
 
     .link-underline-active::after {

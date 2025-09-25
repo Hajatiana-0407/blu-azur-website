@@ -10,35 +10,36 @@ const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
-        <header className="w-full h-[79.26px] fixed top-10 left-0 right-0 z-50 bg-transparent">
+        <header className="w-full h-[76px] fixed top-5 left-0 right-0 z-50 bg-transparent">
             <div className="__container relative">
                 <div className="w-full h-full border-b border-white flex justify-between items-center">
                     {/* Logo */}
                     <div className="text-white">
                         <a href="#about">
-                            <img src={logo} alt="logo" className="w-[110px]" />
+                            <img src={logo} alt="logo" className="w-[106px]" />
                         </a>
                     </div>
+
                     {/* Desktop Navigation */}
-                    <nav className="hidden md:flex gap-10 items-center">
-                        <ul className="flex gap-4 text-lg text-white font-bold">
+                    <nav className="hidden md:block">
+                        <ul className="flex  text-lg text-white font-bold">
                             <li className={clsx({
                                 'link-underline-active': activeOnglet === 'about'
                             }, 'relative link-underline')} onClick={() => setActiveOnglet('about')}>
-                                <a className="inline-block py-3 px-7 leading-[100%]" href="#about">À propos</a>
+                                <a className="inline-block py-2 px-7 leading-[100%]" href="#about">À propos</a>
                             </li>
                             <li className={clsx({
                                 'link-underline-active': activeOnglet === 'localisation'
                             }, 'relative link-underline')} onClick={() => setActiveOnglet('localisation')}>
-                                <a className="inline-block py-3 px-7 leading-[100%]" href="#localisation">Localisation</a>
+                                <a className="inline-block py-2 px-7 leading-[100%]" href="#localisation">Localisation</a>
                             </li>
                             <li className={clsx({
                                 'link-underline-active': activeOnglet === 'activity'
                             }, 'relative link-underline')} onClick={() => setActiveOnglet('activity')}>
-                                <a className="inline-block py-3 px-7 leading-[100%]" href="#activity">Activités</a>
+                                <a className="inline-block py-2 px-7 leading-[100%]" href="#activity">Activités</a>
                             </li>
                             <li className="rounded-full bg-theme">
-                                <a onClick={() => setActiveOnglet('reservation')} className="inline-block py-3 px-7 leading-[100%]" href="#activity">Réservé</a>
+                                <a onClick={() => setActiveOnglet('reservation')} className="inline-block py-2 px-7 leading-[100%]" href="#activity">Réservé</a>
                             </li>
                         </ul>
                     </nav>
@@ -48,6 +49,7 @@ const Header = () => {
                         <HiOutlineMenuAlt3 className="text-white text-5xl cursor-pointer" />
                     </button>
                 </div>
+
                 {/* Mobile Menu */}
                 {mobileMenuOpen && (
                     <nav className="md:hidden absolute top-[79.26px] left-0 right-0 w-full z-50">
