@@ -3,6 +3,7 @@ import Image2 from "../assets/images/activity/image2.jpeg";
 import Image3 from "../assets/images/activity/image3.jpeg";
 import Image4 from "../assets/images/activity/image4.png";
 import Image5 from "../assets/images/activity/image5.png";
+import ImageBg from "../assets/images/activity/activity.png"
 import Button from "../components/ui/Button";
 
 const activities = [
@@ -50,7 +51,12 @@ const activities = [
 
 const Activity = () => {
     return (
-        <div className="py-20 bg-gray-50">
+        <div
+            className="relative bg-no-repeat bg-cover bg-top py-20 "
+            style={{
+                backgroundImage: `linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0.1)), url(${ImageBg})`,
+            }}
+        >
             <div className="__container space-y-8">
 
                 {/* Pour gerer la 1er ligne en 2 cols  */}
@@ -97,14 +103,13 @@ const ActivityCard: React.FC<CardProps> = ({
 }) => {
     return (
         <div
-            className={`relative rounded-3xl overflow-hidden  group text-white ${height}`}
+            className={`relative rounded-3xl overflow-hidden  group text-white md:${height} h-[430px]`}
         >
             <img
                 src={image}
                 alt={title}
-                className="absolute inset-0 w-full h-full object-cover object-bottom group-hover:scale-105 transition-transform duration-500"
+                className="absolute inset-0 w-full h-full object-cover object-bottom group-hover:scale-115 transition-transform duration-500"
             />
-
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/98 via-black/80 to-transparent p-10 flex flex-col justify-end space-y-4">
                 <h3 className="text-xl font-bold text-white">{title}</h3>
