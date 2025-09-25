@@ -41,7 +41,7 @@ const App = () => {
 
 
   return (
-    <div className='h-screen'>
+    <div className='h-screen bg-black'>
       <Header />
 
       <section id='about'>

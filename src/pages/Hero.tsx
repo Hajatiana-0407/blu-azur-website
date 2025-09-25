@@ -39,17 +39,16 @@ const Hero = () => {
             }}
         >
             <div className="__container text-white">
-                <div className="w-full min-h-80 grid grid-cols-8 min-[1542px]:gap-20">
+                <div className="w-full min-h-80 grid grid-cols-2 gap-10">
                     {/* Left Content */}
-                    <div className="space-y-10 py-20 max-md:col-span-8 col-span-5 min-[1188px]:col-span-4">
+                    <div className="space-y-10 py-20 max-lg:col-span-2 max-lg:text-center  ">
                         <h1 className=" text-6xl">
-                            <span className="block font-bold">{heroContent.title}</span>
-                            <span className="block">{heroContent.subTitle}</span>
+                            <span className="font-bold">{heroContent.title}</span>{" "}<span className="">{heroContent.subTitle}</span>
                         </h1>
 
-                        <p className="text-justify text-lg">{heroContent.paragraph}</p>
+                        <p className="text-center lg:text-justify text-lg">{heroContent.paragraph}</p>
 
-                        <div className="mt-30">
+                        <div className="mt:15 lg:mt-30 max-lg:max-w-100 mx-auto">
                             <Button
                                 label={heroContent.cta.label}
                                 href={heroContent.cta.href}
@@ -59,14 +58,14 @@ const Hero = () => {
                     </div>
 
                     {/* Right Content ( Petit slider) */}
-                    <div className="min-h-70 max-md:col-span-8 col-span-3 min-[1188px]:col-span-4">
+                    <div className="min-h-40 max-lg:col-span-2 max-full">
                         <Slider images={sliderImages} position="bottom" />
                     </div>
                 </div>
             </div>
 
             {/* Social Media Sidebar */}
-            <aside className="absolute left-0 top-0 bottom-0 w-15 min-[1300px]:w-[72px]  bg-theme/50 flex flex-col justify-end items-center gap-10 py-40">
+            <aside className="absolute left-0 top-0 bottom-0 w-10 lg:w-15 min-[1300px]:w-[72px]  bg-theme/50 flex flex-col justify-end items-center gap-10 py-40">
                 {socialLinks.map(({ name, link, icon: Icon }) => (
                     <a
                         key={name}
@@ -76,7 +75,7 @@ const Hero = () => {
                         aria-label={name}
                         className="text-white text-2xl hover:scale-120 transition-transform duration-500"
                     >
-                        <Icon className="h-8 w-8" />
+                        <Icon className="w-6 h-6 lg:h-8 lg:w-8" />
                     </a>
                 ))}
             </aside>
