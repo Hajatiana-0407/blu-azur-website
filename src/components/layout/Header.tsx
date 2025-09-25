@@ -24,31 +24,30 @@ const Header = () => {
 
 
     useEffect(() => {
-        const sections = document.querySelectorAll('.__observe_to_change_header');
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const hasWhite = entry.target.getAttribute("data-white");
-                        setIsToColor(hasWhite !== null ? true : false);
+        const headerHeight = 75 + 20; // 75px + pt-5 (≈20px si tu es en Tailwind = 1.25rem)
 
-                        const id = entry.target.getAttribute("id");
-                        if (id) setActiveOnglet(id);
-                    }
-                });
-            },
-            {
-                rootMargin: "-76px 0px 0px 0px",
-                threshold: 0,
-            }
-        );
+        const handleScroll = () => {
+            const sections = document.querySelectorAll('.__observe_to_change_header');
+            let active = false;
 
-        sections.forEach((section) => observer.observe(section));
+            sections.forEach((section) => {
+                const rect = section.getBoundingClientRect();
 
-        return () => {
-            sections.forEach((section) => observer.unobserve(section));
+                // Si le haut du composant passe sous le header
+                if (rect.top <= headerHeight && rect.bottom > headerHeight) {
+                    const hasWhite = section.getAttribute("data-white");
+                    active = hasWhite !== null;
+                }
+            });
+
+            setIsToColor(active);
         };
-    }, [setActiveOnglet]);
+
+        window.addEventListener("scroll", handleScroll);
+        handleScroll(); // exécution initiale
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
 
     const handleNavClick = useCallback(
@@ -63,7 +62,7 @@ const Header = () => {
         <header className={clsx("w-full h-[76px] fixed top-5 left-0 right-0 z-50 ")}>
             <div className={clsx("__container max-w-[1250] ")} >
                 <div className={clsx({
-                    'px-[5px] rounded relative backdrop-blur-lg bg-theme/30': isToColor,
+                    'px-[5px] rounded relative backdrop-blur-lg bg-black/15': isToColor,
                 }, "w-full h-full border-b border-white flex justify-between items-center px-[5px]")} >
                     {/* Logo */}
                     <a href="#about" className="text-white">
