@@ -22,17 +22,17 @@ const Button: React.FC<ButtonProps> = ({
     size
 }) => {
     const colorStyles = clsx({
-        'border border-white text-white hover:bg-white hover:text-black': color === 'white',
-        'border border-theme text-theme hover:bg-theme hover:text-white': color === 'theme',
-        'bg-theme text-white border border-transparent': backgroundColor === 'theme' && !color,
+        'border-1 border-white text-white hover:bg-white hover:text-black': color === 'white',
+        'border-1 border-theme text-theme hover:bg-theme hover:text-white': color === 'theme',
+        'bg-theme text-white border-1 border-transparent': backgroundColor === 'theme' && !color,
     })
 
     const iconStyles = clsx(
-        'absolute p-1 border rounded-full right-6 top-1/2 -translate-y-1/2 transition-all duration-300',
+        'absolute p-1 border-1 rounded-full right-6 top-1/2 -translate-y-1/2 transition-all duration-300',
         {
-            'border border-white group-hover:text-black': color === 'white',
-            'border border-theme group-hover:text-white': color === 'theme',
-            'border border-white': backgroundColor === 'theme' && !color,
+            'border-1 border-white group-hover:text-black': color === 'white',
+            'border-1 border-theme group-hover:text-white': color === 'theme',
+            'border-1 border-white': backgroundColor === 'theme' && !color,
         }
     )
 

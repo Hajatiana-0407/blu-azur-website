@@ -13,7 +13,10 @@ const sliderImages = [sofaImage, sofaImage];
 
 const Feature = () => {
   return (
-    <div className="py-25 bg-white text-black">
+    <div 
+    data-white={true}
+    className="py-20 bg-white text-black __observe_to_change_header"
+    >
       <div className="__container">
         <div className="w-full grid grid-cols-2 gap-10">
 

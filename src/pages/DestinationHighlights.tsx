@@ -36,7 +36,8 @@ const activities = [
 const DestinationHighlights = () => {
     return (
         <div
-            className="relative bg-no-repeat bg-cover bg-top py-40 text-white"
+        
+            className="relative bg-no-repeat bg-cover bg-top py-20 text-white __observe_to_change_header"
             style={{
                 backgroundImage: `linear-gradient(to right, rgba(var(--color-theme-rgb), 1),rgba(var(--color-theme-rgb), 1) , rgba(0,0,0,0.2)), url(${ImageBackround})`,
             }}

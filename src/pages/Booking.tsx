@@ -4,7 +4,8 @@ import Button from "../components/ui/Button";
 const Booking = () => {
     return (
         <div
-            className="relative  bg-cover bg-center py-80 text-white"
+
+            className="relative  bg-cover bg-center py-80 text-white __observe_to_change_header"
             style={{
                 backgroundImage: `linear-gradient(to right, rgba(var(--color-theme-rgb), 1),rgba(var(--color-theme-rgb), 0.4)  ,  rgba(0,0,0,0.2)), url(${BookingImageBg})`,
             }}
