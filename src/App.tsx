@@ -1,6 +1,7 @@
 import Footer from './components/layout/Footer'
 import Header from './components/layout/Header'
 import './index.css'
+import Booking from './pages/Booking'
 import DestinationHighlights from './pages/DestinationHighlights'
 import Discover from './pages/Discover'
 import Feature from './pages/Feature'
@@ -12,7 +13,7 @@ const App = () => {
   return (
     <div className='h-screen'>
       <Header />
-      
+
       <section id='about'>
         <Hero />
         <Feature />
@@ -22,6 +23,10 @@ const App = () => {
       <section id='location'>
         <Location />
         <Discover />
+      </section>
+
+      <section id='booking'>
+        <Booking />
       </section>
 
       <Footer />

@@ -39,7 +39,7 @@ const Header = () => {
                                 <a className="inline-block py-2 px-7 leading-[100%]" href="#activity">Activités</a>
                             </li>
                             <li className="rounded-full bg-theme">
-                                <a onClick={() => setActiveOnglet('reservation')} className="inline-block py-2 px-7 leading-[100%]" href="#activity">Réservé</a>
+                                <a onClick={() => setActiveOnglet('booking')} className="inline-block py-2 px-7 leading-[100%]" href="#booking">Réservé</a>
                             </li>
                         </ul>
                     </nav>
