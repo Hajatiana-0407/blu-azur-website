@@ -1,13 +1,9 @@
-import { HiOutlineMenuAlt3 } from 'react-icons/hi'
-import logo from '../../assets/logo.svg'
-import { useAppContext } from '../../context/AppContext'
-import clsx from 'clsx';
-import { useEffect, useState } from 'react';
+
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import logo from "../../assets/logo.svg";
 import { useAppContext } from "../../context/AppContext";
 import clsx from "clsx";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
